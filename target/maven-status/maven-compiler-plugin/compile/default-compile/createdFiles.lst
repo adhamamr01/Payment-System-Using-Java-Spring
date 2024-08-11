@@ -1,0 +1,11 @@
+com\secondtask\task2\dao\PaymentRepository.class
+com\secondtask\task2\entity\Client.class
+com\secondtask\task2\service\ClientServiceImpl.class
+com\secondtask\task2\service\PaymentService.class
+com\secondtask\task2\entity\Payment.class
+com\secondtask\task2\controller\ClientRestController.class
+com\secondtask\task2\Task2Application.class
+com\secondtask\task2\service\ClientService.class
+com\secondtask\task2\dao\ClientRepository.class
+com\secondtask\task2\service\PaymentServiceImpl.class
+com\secondtask\task2\controller\PaymentRestController.class
