@@ -45,9 +45,6 @@ public class PaymentRestController {
     @PostMapping("/payments")
     public Client addPayment(@RequestBody Payment thePayment) {
 
-        // also just in case they pass an id in JSON ... set id to 0
-        // this is to force a save of new item ... instead of update
-
 
         int clientId = thePayment.getClient().getId();
         Client theClient = clientService.findById(clientId);
@@ -61,8 +58,6 @@ public class PaymentRestController {
 
         theClient.add(thePayment);
         Client dbClient = clientService.save(theClient);
-//        Payment dbPayment = paymentService.save(thePayment);
-
 
         return dbClient;
     }

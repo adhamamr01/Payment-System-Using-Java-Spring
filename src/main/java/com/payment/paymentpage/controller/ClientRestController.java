@@ -45,9 +45,6 @@ public class ClientRestController {
     @PostMapping("/clients")
     public Client addClient(@RequestBody Client theClient) {
 
-        // also just in case they pass an id in JSON ... set id to 0
-        // this is to force a save of new item ... instead of update
-
         theClient.setId(0);
 
         Client dbClient = clientService.save(theClient);
@@ -60,7 +57,6 @@ public class ClientRestController {
         InquiryResponse inquiryResponse = clientService.findSumAmountByClientId(clientId);
 
         Client theClient = clientService.findById(clientId);
-//        System.out.println(clientService.sumAmount(clientId));
         if (theClient == null) {
             throw new RuntimeException("Client id not found - " + clientId);
         }
@@ -72,7 +68,6 @@ public class ClientRestController {
     public Client payAllAmountByClientId(@PathVariable("clientId") int clientId){
 
         Client theClient = clientService.findById(clientId);
-//        System.out.println(clientService.sumAmount(clientId));
         if (theClient == null) {
             throw new RuntimeException("Client id not found - " + clientId);
         }

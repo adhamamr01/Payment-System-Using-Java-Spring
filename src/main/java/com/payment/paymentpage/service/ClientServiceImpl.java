@@ -38,7 +38,6 @@ public class ClientServiceImpl implements ClientService {
         if (result.isPresent()) {
             theClient = result.get();
         } else {
-            // we didn't find the client
             throw new RuntimeException("Did not find client id - " + theId);
         }
 
@@ -72,7 +71,6 @@ public class ClientServiceImpl implements ClientService {
         if (result.isPresent()) {
             theClient = result.get();
         } else {
-            // we didn't find the client
             throw new RuntimeException("Did not find client id - " + client_id);
         }
 

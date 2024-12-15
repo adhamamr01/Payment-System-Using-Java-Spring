@@ -36,7 +36,6 @@ public class PaymentServiceImpl implements PaymentService{
             thePayment = result.get();
         }
         else {
-            // we didn't find the client
             throw new RuntimeException("Did not find payment id - " + theId);
         }
 
